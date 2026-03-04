@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artikel — RPR Hub</title>
+  <link rel="stylesheet" href="../css/articles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📝</text></svg>" />
+</head>
+<body>
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
+  <nav class="navbar">
+    <a href="index.html" class="navbar-brand">🎮 RPR HUB</a>
+    <ul class="navbar-links">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="reviews.html">Review</a></li>
+      <li><a href="maps.html">Peta</a></li>
+      <li><a href="articles.html" class="active">Artikel</a></li>
+    </ul>
+    <div class="navbar-auth" id="navAuth">
+      <a href="login.html"    class="nav-btn nav-btn--outline">Login</a>
+      <a href="register.html" class="nav-btn nav-btn--primary">Daftar</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════ DETAIL AREA ═══════════ -->
+  <main class="detail-wrapper" id="detailWrapper">
+    <!-- Diisi oleh articles.js berdasarkan ?id= di URL -->
+    <div class="detail-loading">
+      <div class="loader-ring"></div>
+      <span>Memuat artikel...</span>
+    </div>
+  </main>
+
+  <script type="module" src="../js/articles.js"></script>
+</body>
+</html>

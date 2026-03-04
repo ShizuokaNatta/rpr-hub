@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artikel & Tips — RPR Hub</title>
+  <link rel="stylesheet" href="../css/articles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📝</text></svg>" />
+</head>
+<body>
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
+  <nav class="navbar">
+    <a href="index.html" class="navbar-brand">🎮 RPR HUB</a>
+    <ul class="navbar-links">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="reviews.html">Review</a></li>
+      <li><a href="maps.html">Peta</a></li>
+      <li><a href="articles.html" class="active">Artikel</a></li>
+    </ul>
+    <div class="navbar-auth" id="navAuth">
+      <a href="login.html"    class="nav-btn nav-btn--outline">Login</a>
+      <a href="register.html" class="nav-btn nav-btn--primary">Daftar</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════ MAIN ═══════════ -->
+  <main class="page-wrapper">
+
+    <!-- Header -->
+    <div class="page-header">
+      <div class="page-header-inner">
+        <div>
+          <span class="page-tag">📝 Artikel & Tips</span>
+          <h1>Artikel <span>Komunitas</span></h1>
+          <p>Tips, trik, panduan, dan cerita seru seputar dunia Roblox dari sesama pemain.</p>
+        </div>
+        <div class="article-count-badge">
+          <span class="count-num" id="totalArticleCount">—</span>
+          <span class="count-label">Total Artikel</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Layout -->
+    <div class="articles-layout">
+
+      <!-- ── LEFT: FORM ── -->
+      <aside>
+        <div class="form-panel">
+          <div class="form-panel-title">✍️ Tulis Artikel</div>
+          <div class="form-alert" id="formAlert"></div>
+          <div id="formContent">
+            <div style="background:transparent;border:none;padding:0;">
+              <div class="skeleton-line w-80"></div>
+              <div class="skeleton-line w-60"></div>
+              <div class="skeleton-line h-8 w-80"></div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- ── RIGHT: LIST ── -->
+      <section>
+
+        <!-- Filter -->
+        <div class="filter-bar">
+          <input type="text" id="searchInput"
+            placeholder="🔍 Cari judul artikel..."
+            autocomplete="off" />
+          <select class="sort-select" id="sortSelect">
+            <option value="newest">Terbaru</option>
+            <option value="oldest">Terlama</option>
+            <option value="az">A → Z</option>
+            <option value="za">Z → A</option>
+          </select>
+        </div>
+
+        <div class="articles-list-header" id="listHeader">Memuat artikel...</div>
+
+        <!-- Grid -->
+        <div class="articles-grid" id="articlesGrid">
+          <div class="skeleton-card"><div class="skeleton-img"></div><div class="skeleton-body"><div class="skeleton-line w-80"></div><div class="skeleton-line w-60 h-8"></div></div></div>
+          <div class="skeleton-card"><div class="skeleton-img"></div><div class="skeleton-body"><div class="skeleton-line w-80"></div><div class="skeleton-line w-60 h-8"></div></div></div>
+          <div class="skeleton-card"><div class="skeleton-img"></div><div class="skeleton-body"><div class="skeleton-line w-80"></div><div class="skeleton-line w-60 h-8"></div></div></div>
+        </div>
+
+        <div class="load-more-wrap" id="loadMoreWrap" style="display:none">
+          <button class="btn-load-more" id="loadMoreBtn">Muat Lebih Banyak</button>
+        </div>
+
+      </section>
+    </div>
+  </main>
+
+  <script type="module" src="../js/articles.js"></script>
+</body>
+</html>

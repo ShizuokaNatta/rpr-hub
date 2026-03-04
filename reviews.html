@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Review Game — RPR Hub</title>
+  <link rel="stylesheet" href="../css/reviews.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>" />
+</head>
+<body>
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
+  <nav class="navbar">
+    <a href="index.html" class="navbar-brand">🎮 RPR HUB</a>
+    <ul class="navbar-links">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="reviews.html" class="active">Review</a></li>
+      <li><a href="maps.html">Peta</a></li>
+      <li><a href="articles.html">Artikel</a></li>
+    </ul>
+    <div class="navbar-auth" id="navAuth">
+      <a href="login.html"    class="nav-btn nav-btn--outline">Login</a>
+      <a href="register.html" class="nav-btn nav-btn--primary">Daftar</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════ MAIN ═══════════ -->
+  <main class="page-wrapper">
+
+    <!-- Header -->
+    <div class="page-header">
+      <div class="page-header-inner">
+        <div>
+          <span class="page-tag">⭐ Community Reviews</span>
+          <h1>Review <span>Game Roblox</span></h1>
+          <p>Bagikan pengalamanmu bermain dan bantu pemain lain menemukan game terbaik.</p>
+        </div>
+        <div class="review-count-badge">
+          <span class="count-num" id="totalReviewCount">—</span>
+          <span class="count-label">Total Review</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Two Column Layout -->
+    <div class="reviews-layout">
+
+      <!-- ── LEFT: FORM PANEL ── -->
+      <aside>
+        <div class="form-panel" id="formPanel">
+          <!-- Diisi JS: form atau login prompt -->
+          <div class="form-panel-title">✍️ Tulis Review</div>
+
+          <div class="form-alert" id="formAlert"></div>
+
+          <div id="formContent">
+            <!-- Loading sementara -->
+            <div class="skeleton-card" style="background:transparent;border:none;padding:0;">
+              <div class="skeleton-line w-80"></div>
+              <div class="skeleton-line w-60"></div>
+              <div class="skeleton-line w-40 h-8"></div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- ── RIGHT: REVIEW LIST ── -->
+      <section class="reviews-list-section">
+
+        <!-- Filter -->
+        <div class="filter-bar">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="🔍 Cari nama game..."
+            autocomplete="off"
+          />
+          <div class="filter-stars">
+            <button class="active" data-star="0">Semua</button>
+            <button data-star="5">⭐5</button>
+            <button data-star="4">⭐4</button>
+            <button data-star="3">⭐3</button>
+          </div>
+        </div>
+
+        <div class="reviews-list-header" id="listHeader">Memuat review...</div>
+
+        <!-- List -->
+        <div class="reviews-grid" id="reviewsGrid">
+          <!-- Skeleton -->
+          <div class="skeleton-card"><div class="skeleton-line w-60"></div><div class="skeleton-line w-40 h-8"></div><div class="skeleton-line w-80"></div></div>
+          <div class="skeleton-card"><div class="skeleton-line w-60"></div><div class="skeleton-line w-40 h-8"></div><div class="skeleton-line w-80"></div></div>
+          <div class="skeleton-card"><div class="skeleton-line w-60"></div><div class="skeleton-line w-40 h-8"></div><div class="skeleton-line w-80"></div></div>
+        </div>
+
+        <div class="load-more-wrap" id="loadMoreWrap" style="display:none">
+          <button class="btn-load-more" id="loadMoreBtn">Muat Lebih Banyak</button>
+        </div>
+
+      </section>
+    </div>
+  </main>
+
+  <script type="module" src="../js/reviews.js"></script>
+</body>
+</html>

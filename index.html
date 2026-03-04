@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="RPR Hub — Komunitas resmi Roblox berbahasa Indonesia. Review game, showcase peta, dan artikel tips dari sesama player." />
+  <title>RPR Hub — Rutinitas Player Roblox</title>
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>" />
+</head>
+<body>
+
+  <!-- ═══════════ GLOBAL BACKGROUND ═══════════ -->
+  <div class="global-bg" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
+  <nav class="navbar" role="navigation" aria-label="Navigasi utama">
+    <a href="index.html" class="navbar-brand" aria-label="RPR Hub Beranda">
+      <span class="brand-icon">🎮</span>
+      <span class="brand-text">RPR HUB</span>
+    </a>
+
+    <ul class="navbar-links" role="list">
+      <li><a href="index.html" class="active">
+        <span class="nav-icon">🏠</span> Beranda
+      </a></li>
+      <li><a href="reviews.html">
+        <span class="nav-icon">⭐</span> Review
+      </a></li>
+      <li><a href="maps.html">
+        <span class="nav-icon">🗺️</span> Peta
+      </a></li>
+      <li><a href="articles.html">
+        <span class="nav-icon">📝</span> Artikel
+      </a></li>
+    </ul>
+
+    <div class="navbar-auth" id="navAuth">
+      <a href="login.html"    class="nav-btn nav-btn--outline">Login</a>
+      <a href="register.html" class="nav-btn nav-btn--primary">🚀 Daftar</a>
+    </div>
+
+    <button class="nav-hamburger" id="hamburgerBtn" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Menu mobile">
+    <a href="index.html"    class="active"><span>🏠</span> Beranda</a>
+    <a href="reviews.html">           <span>⭐</span> Review Game</a>
+    <a href="maps.html">              <span>🗺️</span> Showcase Peta</a>
+    <a href="articles.html">          <span>📝</span> Artikel & Tips</a>
+    <div class="mobile-menu-divider"></div>
+    <div class="mobile-menu-auth" id="mobileAuth">
+      <a href="login.html"    class="nav-btn nav-btn--outline" style="flex:1;justify-content:center">Login</a>
+      <a href="register.html" class="nav-btn nav-btn--primary" style="flex:1;justify-content:center">Daftar</a>
+    </div>
+  </div>
+
+  <!-- ═══════════ HERO ═══════════ -->
+  <section class="hero" aria-label="Hero section">
+    <!-- Left: Copy -->
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="blink"></span>
+        Komunitas Roblox Indonesia
+      </div>
+
+      <h1 class="hero-title">
+        Tempat Kamu
+        <span class="line-accent">Berbagi & Berkembang</span>
+        Bersama
+      </h1>
+
+      <p class="hero-desc">
+        RPR Hub adalah rumah bagi para player Roblox Indonesia.
+        Review game favoritmu, tampilkan peta kreasimu, dan bagikan
+        tips terbaik kepada sesama pemain.
+      </p>
+
+      <div class="hero-cta">
+        <a href="register.html" class="btn-hero-primary">
+          🚀 Gabung Sekarang — Gratis
+        </a>
+        <a href="reviews.html" class="btn-hero-secondary">
+          ⭐ Lihat Review
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="stat-num" id="statReviews">—</div>
+          <div class="stat-label">Review</div>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <div class="stat-num" id="statMaps">—</div>
+          <div class="stat-label">Peta</div>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <div class="stat-num" id="statArticles">—</div>
+          <div class="stat-label">Artikel</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Visual Panel -->
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hero-panel">
+        <div class="hero-panel-header">
+          <div class="hero-panel-dots">
+            <span class="dot-red"></span>
+            <span class="dot-yellow"></span>
+            <span class="dot-green"></span>
+          </div>
+          <span class="hero-panel-title">Live Reviews</span>
+        </div>
+        <div class="hero-panel-body" id="heroPanelBody">
+          <!-- Diisi JS -->
+          <div class="mini-review">
+            <div class="mini-review-top">
+              <span class="mini-review-game">Memuat...</span>
+              <div class="mini-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            </div>
+            <div class="mini-review-text">Memuat review terbaru...</div>
+            <div class="mini-review-author">@loading</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FEATURE PILLS ═══════════ -->
+  <div class="features-bar" aria-label="Fitur utama">
+    <div class="features-inner">
+      <span class="feature-pill cyan">
+        <span class="pill-icon">⭐</span> Review & Rating Game
+      </span>
+      <span class="feature-pill purple">
+        <span class="pill-icon">🗺️</span> Showcase Peta Roblox
+      </span>
+      <span class="feature-pill green">
+        <span class="pill-icon">📝</span> Artikel & Tips Komunitas
+      </span>
+      <span class="feature-pill yellow">
+        <span class="pill-icon">👥</span> Komunitas Player Indonesia
+      </span>
+    </div>
+  </div>
+
+  <!-- ═══════════ FEED: LATEST REVIEWS ═══════════ -->
+  <section class="feed-section" aria-label="Review terbaru">
+    <div class="section-header">
+      <div class="section-label">
+        <div class="section-icon-wrap cyan">⭐</div>
+        <div class="section-text">
+          <div class="section-tag cyan">Terbaru</div>
+          <div class="section-title">Review Game</div>
+        </div>
+      </div>
+      <a href="reviews.html" class="section-view-all">Lihat Semua →</a>
+    </div>
+    <div class="feed-reviews-grid" id="feedReviews">
+      <div class="feed-skeleton"><div class="sk-img"></div><div class="sk-body"><div class="sk-line w-80"></div><div class="sk-line w-50 h-8"></div></div></div>
+      <div class="feed-skeleton"><div class="sk-img"></div><div class="sk-body"><div class="sk-line w-80"></div><div class="sk-line w-50 h-8"></div></div></div>
+      <div class="feed-skeleton"><div class="sk-img"></div><div class="sk-body"><div class="sk-line w-80"></div><div class="sk-line w-50 h-8"></div></div></div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FEED: LATEST MAPS ═══════════ -->
+  <section class="feed-section" aria-label="Peta terbaru">
+    <div class="section-header">
+      <div class="section-label">
+        <div class="section-icon-wrap purple">🗺️</div>
+        <div class="section-text">
+          <div class="section-tag purple">Terbaru</div>
+          <div class="section-title">Showcase Peta</div>
+        </div>
+      </div>
+      <a href="maps.html" class="section-view-all">Lihat Semua →</a>
+    </div>
+    <div class="feed-maps-grid" id="feedMaps">
+      <div class="feed-skeleton"><div class="sk-img"></div><div class="sk-body"><div class="sk-line w-80"></div><div class="sk-line w-50 h-8"></div></div></div>
+      <div class="feed-skeleton"><div class="sk-img"></div><div class="sk-body"><div class="sk-line w-80"></div><div class="sk-line w-50 h-8"></div></div></div>
+      <div class="feed-skeleton"><div class="sk-img"></div><div class="sk-body"><div class="sk-line w-80"></div><div class="sk-line w-50 h-8"></div></div></div>
+      <div class="feed-skeleton"><div class="sk-img"></div><div class="sk-body"><div class="sk-line w-80"></div><div class="sk-line w-50 h-8"></div></div></div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FEED: LATEST ARTICLES ═══════════ -->
+  <section class="feed-section" aria-label="Artikel terbaru">
+    <div class="section-header">
+      <div class="section-label">
+        <div class="section-icon-wrap green">📝</div>
+        <div class="section-text">
+          <div class="section-tag green">Terbaru</div>
+          <div class="section-title">Artikel & Tips</div>
+        </div>
+      </div>
+      <a href="articles.html" class="section-view-all">Lihat Semua →</a>
+    </div>
+    <div class="feed-articles-grid" id="feedArticles">
+      <div class="feed-skeleton"><div class="sk-img"></div><div class="sk-body"><div class="sk-line w-80"></div><div class="sk-line w-50 h-8"></div></div></div>
+      <div class="feed-skeleton"><div class="sk-img"></div><div class="sk-body"><div class="sk-line w-80"></div><div class="sk-line w-50 h-8"></div></div></div>
+      <div class="feed-skeleton"><div class="sk-img"></div><div class="sk-body"><div class="sk-line w-80"></div><div class="sk-line w-50 h-8"></div></div></div>
+    </div>
+  </section>
+
+  <!-- ═══════════ CTA BANNER ═══════════ -->
+  <div class="cta-banner" id="ctaBanner">
+    <div class="cta-inner">
+      <div class="cta-text">
+        <span class="cta-tag">🎮 Bergabung Sekarang</span>
+        <h2 class="cta-title">Jadilah Bagian dari<br>Komunitas RPR Hub</h2>
+        <p class="cta-desc">
+          Daftar gratis dan mulai berbagi review, peta, serta artikel
+          dengan ribuan player Roblox Indonesia lainnya.
+        </p>
+      </div>
+      <div class="cta-actions" id="ctaActions">
+        <a href="register.html" class="btn-cta-primary">🚀 Daftar Gratis</a>
+        <a href="login.html"    class="btn-cta-secondary">Login →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+
+      <!-- Brand col -->
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">
+          <span style="font-size:1.4rem">🎮</span>
+          <span class="brand-text">RPR HUB</span>
+        </a>
+        <p class="footer-tagline">
+          Komunitas resmi Roblox Indonesia — tempat player berbagi, belajar, dan berkembang bersama.
+        </p>
+      </div>
+
+      <!-- Nav col -->
+      <div>
+        <div class="footer-col-title">Navigasi</div>
+        <ul class="footer-links">
+          <li><a href="index.html">🏠 Beranda</a></li>
+          <li><a href="reviews.html">⭐ Review Game</a></li>
+          <li><a href="maps.html">🗺️ Showcase Peta</a></li>
+          <li><a href="articles.html">📝 Artikel & Tips</a></li>
+        </ul>
+      </div>
+
+      <!-- Akun col -->
+      <div>
+        <div class="footer-col-title">Akun</div>
+        <ul class="footer-links">
+          <li><a href="register.html">Daftar Gratis</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </div>
+
+      <!-- Info col -->
+      <div>
+        <div class="footer-col-title">Tentang</div>
+        <ul class="footer-links">
+          <li><a href="#">Tentang RPR Hub</a></li>
+          <li><a href="#">Panduan Komunitas</a></li>
+          <li><a href="#">Kebijakan Privasi</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 RPR Hub — Dibuat dengan <span class="footer-heart">❤️</span> untuk Rutinitas Player Roblox</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privasi</a>
+        <a href="#">Ketentuan</a>
+        <a href="#">Kontak</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="../js/main.js"></script>
+</body>
+</html>

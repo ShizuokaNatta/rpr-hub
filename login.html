@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login — RPR Hub</title>
+  <link rel="stylesheet" href="../css/auth.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>" />
+</head>
+<body>
+
+  <div class="auth-wrapper">
+    <div class="auth-card">
+
+      <!-- Back -->
+      <a href="index.html" class="auth-back">← Kembali ke Beranda</a>
+
+      <!-- Brand -->
+      <div class="auth-brand">
+        <div class="logo-mark">🎮</div>
+        <h1>RPR HUB</h1>
+        <p>Rutinitas Player Roblox</p>
+      </div>
+
+      <!-- Alert -->
+      <div class="auth-alert" id="authAlert" role="alert"></div>
+
+      <!-- Title -->
+      <div class="auth-title">Masuk ke Akunmu</div>
+
+      <!-- Form -->
+      <div id="loginForm">
+
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email">Email</label>
+          <div class="input-wrap">
+            <span class="input-icon">✉️</span>
+            <input
+              type="email"
+              id="email"
+              placeholder="email@kamu.com"
+              autocomplete="email"
+            />
+          </div>
+          <span class="field-error" id="emailError"></span>
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+          <label for="password">Password</label>
+          <div class="input-wrap">
+            <span class="input-icon">🔒</span>
+            <input
+              type="password"
+              id="password"
+              placeholder="Password kamu"
+              maxlength="72"
+              autocomplete="current-password"
+            />
+            <button type="button" class="toggle-password" id="togglePwd" aria-label="Tampilkan password">👁️</button>
+          </div>
+          <span class="field-error" id="passwordError"></span>
+        </div>
+
+        <!-- Submit -->
+        <button class="btn-auth" id="loginBtn" type="button">
+          Masuk
+        </button>
+
+      </div><!-- /loginForm -->
+
+      <div class="auth-divider">atau</div>
+
+      <div class="auth-switch">
+        Belum punya akun? <a href="register.html">Daftar gratis</a>
+      </div>
+
+    </div>
+  </div>
+
+  <script type="module" src="../js/auth.js"></script>
+</body>
+</html>
